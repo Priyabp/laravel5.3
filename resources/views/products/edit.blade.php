@@ -1,3 +1,5 @@
+@include('errors.validationerror')
+<h1> Update Product</h1>
 {!! Form::model($product, [
     'method' => 'PATCH',
     'route' => ['product.update', $product->id]
@@ -12,6 +14,6 @@
 	{!! Form::text('price', null) !!}<br/><br/>
 	
 
-{!! Form::submit('Update Task', ['class' => 'btn btn-primary']) !!}
+{!! Form::submit('Update Product', ['class' => 'btn btn-primary']) !!}
 
 {!! Form::close() !!}

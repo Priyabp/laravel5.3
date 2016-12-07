@@ -1,15 +1,14 @@
-<table>
-<th>Product Name</th>
-<th>Category</th>
-<th>Price</th>
-<tbody>
+<h1>Products Details</h1>
+
 @foreach($products as $products)
-	<tr>
-	 <td> {!! $products->name !!}</td>
-	 <td> {!! $products->category !!}</td>
-	 <td> {!! $products->price !!}</td>
-	</tr>
+	 <b>Product Name </b>: {!! $products->name !!}<br/>
+	 <b>Category </b>: {!! $products->category !!}<br/>
+	 <b>Price </b>: {!! $products->price !!}
+	<br/><br/>
+	 <p class="btn btn-primary">{!! link_to_route('product.edit','UPDATE',[$products->id] )!!}</p>
+	 {!! link_to_route('product.destroy','DELETE',[$products->id] )!!}
+
+	 <hr>
+	
 
 @endforeach
-</tbody>
-</table>
